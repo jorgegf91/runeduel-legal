@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rune Duel — Legal</title>
+<style>
+  :root {
+    --bg: #0a0f0d;
+    --surface: #131a17;
+    --text: #e8efe9;
+    --text-soft: #8b9b91;
+    --accent: #4ade80;
+    --accent-soft: #6ee7a3;
+    --accent-dim: rgba(74, 222, 128, 0.18);
+    --border: #1f2925;
+    --code-bg: #1a221d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    padding: 0 20px 60px;
+  }
+
+  /* ── Sticky top nav ───────────────────────────── */
+  .topnav {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 15, 13, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+    margin: 0 -20px 40px;
+    padding: 14px 20px;
+  }
+  .topnav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-shadow: 0 0 18px rgba(74, 222, 128, 0.4);
+  }
+  .nav-links {
+    display: flex;
+    gap: 18px;
+  }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── Sections ─────────────────────────────────── */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .doc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 48px 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(74, 222, 128, 0.03);
+    scroll-margin-top: 80px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 600px) {
+    .doc { padding: 28px 22px; }
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .last-updated {
+    color: var(--text-soft);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+  .intro {
+    font-size: 16px;
+    color: var(--text-soft);
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    margin: 0 0 36px;
+    background: var(--accent-dim);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    border-radius: 0 6px 6px 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+  ul li { margin-bottom: 8px; }
+  ul li::marker {
+    color: var(--accent);
+  }
+  strong { color: var(--accent-soft); }
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(74, 222, 128, 0.4);
+    text-underline-offset: 3px;
+    transition: color 0.15s;
+  }
+  a:hover { color: var(--accent-soft); }
+
+  footer {
+    margin-top: 28px;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-soft);
+  }
+</style>
+</head>
+<body>
+
+  <!-- Sticky nav -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <span class="brand">Rune Duel · Legal</span>
+      <div class="nav-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- ── PRIVACY POLICY ─────────────────────────────── -->
+    <section id="privacy" class="doc">
+
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: [LAST_UPDATED_DATE]</p>
+
+      <p class="intro">
+        This Privacy Policy explains what Rune Duel collects, how it is used, and the choices you have.
+        By installing or using the App you agree to this policy. If you do not agree, please uninstall.
+      </p>
+
+      <h2>1. What we collect</h2>
+      <p>Rune Duel does not require an account and does not ask for your name, email address, phone number, or precise location.</p>
+      <p><strong>Automatically:</strong></p>
+      <ul>
+        <li><strong>Anonymous Device ID</strong> — a random UUID generated locally on first launch, used to prevent abuse of rewarded ads and promo codes.</li>
+        <li><strong>Usage analytics</strong> (via Google Firebase Analytics) — anonymous events such as sessions, levels reached, features used.</li>
+        <li><strong>Crash reports</strong> (via Google Firebase Crashlytics) — error details, device model, OS version, app version.</li>
+        <li><strong>Advertising data</strong> (via Google AdMob) — your Android Advertising ID is shared with Google to display rewarded video ads.</li>
+      </ul>
+      <p><strong>Stored only on your device, never uploaded:</strong></p>
+      <p>Your game progress, settings, unlocked content. Uninstalling the App deletes this data.</p>
+
+      <h2>2. How we use it</h2>
+      <p>To operate and improve the App, fix bugs, show rewarded ads, verify promo codes, and reply to feedback. We do <strong>not</strong> sell your data or send marketing emails.</p>
+
+      <h2>3. Third parties</h2>
+      <p>The App relies on:</p>
+      <ul>
+        <li><strong>Google</strong> (Firebase Analytics, Crashlytics, AdMob, Play Services) — see
+          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+          and
+          <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
+        </li>
+      </ul>
+      <p>We encourage you to read their policies.</p>
+
+      <h2>4. Children</h2>
+      <p>Rune Duel is intended for users aged <strong>13 and over</strong>. We do not knowingly collect data from children under 13. If you believe a child has provided information through the App, contact us and we will delete it.</p>
+
+      <h2>5. Your rights</h2>
+      <p>You can disable analytics and ad personalization at any time via your device settings (Android: Settings → Privacy → Ads).</p>
+      <p>You can delete all local data in the in-app Settings, or by uninstalling.</p>
+      <p>If you are located in the <strong>European Economic Area, UK or Switzerland</strong>, you have rights under the GDPR: access, rectification, erasure, restriction, portability, objection, withdrawal of consent, and lodging a complaint with your data protection authority.</p>
+      <p>If you are a <strong>California resident</strong>, you have rights under the CCPA: to know what we collect, to delete it, and to opt out of any sale (we do not sell personal information).</p>
+      <p>To exercise any of these rights, email us at the address in Section 7. We respond within 30 days.</p>
+
+      <h2>6. Changes</h2>
+      <p>We may update this Policy from time to time. Material changes will be reflected by updating the "Last updated" date and, if significant, by an in-app notice on next launch.</p>
+
+      <h2>7. Contact</h2>
+      <p><strong>Jolly Sky</strong> — <a href="mailto:thejollysky@gmail.com">thejollysky@gmail.com</a></p>
+
+    </section>
+
+    <!-- ── TERMS OF SERVICE ───────────────────────────── -->
+    <section id="terms" class="doc">
+
+      <h1>Terms of Service</h1>
+      <p class="last-updated">Last updated: [LAST_UPDATED_DATE]</p>
+
+      <p class="intro">
+        These Terms govern your use of the Rune Duel mobile application. By installing or using the App,
+        you agree to them. If you do not agree, do not install or use the App.
+      </p>
+
+      <h2>1. Eligibility</h2>
+      <p>You must be at least <strong>13 years old</strong> to use Rune Duel. If you are under the age of majority in your jurisdiction, you may use it only with a parent or guardian's consent.</p>
+
+      <h2>2. License</h2>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to install and use Rune Duel on devices you own or control, for personal non-commercial entertainment.</p>
+      <p>You may not copy, modify, reverse engineer, sell, sublicense, or remove proprietary notices from the App, except where applicable law allows. All content (graphics, music, code, characters, gameplay) is owned by Jolly Sky.</p>
+
+      <h2>3. User conduct</h2>
+      <p>You agree NOT to:</p>
+      <ul>
+        <li>Use the App in violation of any law.</li>
+        <li>Use bots, scripts, modified clients, or memory editors to manipulate gameplay or currency.</li>
+        <li>Exploit bugs for unfair advantage or to abuse rewards, promo codes, or rate limits.</li>
+        <li>Submit abusive, threatening, defamatory, or unlawful feedback.</li>
+        <li>Attempt to gain unauthorized access to our servers or systems.</li>
+      </ul>
+      <p>We may terminate your access if you violate these rules.</p>
+
+      <h2>4. Virtual items and currency</h2>
+      <p>In-game coins, gear, runes, skins and similar items have <strong>no real-world value</strong>, cannot be redeemed for money, and are not transferable. We may add, modify, remove, or reset items, balance values or drop rates at any time. No refunds, except where required by law.</p>
+
+      <h2>5. Advertisements</h2>
+      <p>Rune Duel may show <strong>optional</strong> rewarded video ads via Google AdMob. Skipping or closing an ad may forfeit the reward. Ad content is delivered by third parties; if you encounter inappropriate ads, please report via in-app feedback.</p>
+
+      <h2>6. Promotional codes</h2>
+      <p>Promo codes are valid as we specify (expiration, limits, eligibility), non-transferable, and have no cash value. We may invalidate codes obtained through fraud or abuse.</p>
+
+      <h2>7. Updates and availability</h2>
+      <p>We may release updates, modify features, or discontinue the App at any time without notice. We do not guarantee uninterrupted or error-free operation or indefinite availability.</p>
+
+      <h2>8. Feedback</h2>
+      <p>If you submit suggestions or feedback, you grant us a perpetual, worldwide, royalty-free license to use them in the App or related products without obligation to compensate or credit you.</p>
+
+      <h2>9. Disclaimers and liability</h2>
+      <p>Rune Duel is provided <strong>"AS IS"</strong> without warranties of any kind. To the maximum extent permitted by law, Jolly Sky is not liable for indirect, incidental, or consequential damages, including loss of virtual items, game progress, or third-party ad content.</p>
+      <p>Our total liability for any claim shall not exceed <strong>EUR 50</strong>. Mandatory consumer protection rights in your jurisdiction are not affected.</p>
+
+      <h2>10. Termination</h2>
+      <p>You may stop using the App at any time by uninstalling it. We may suspend or terminate access if you violate these Terms. Sections that by nature survive termination (license, IP, disclaimers, liability, governing law) continue to apply.</p>
+
+      <h2>11. Changes</h2>
+      <p>We may update these Terms. Material changes will be reflected by updating the "Last updated" date and, if significant, by an in-app notice on next launch. Continued use after a change constitutes acceptance.</p>
+
+      <h2>12. Contact</h2>
+      <p><strong>Jolly Sky</strong> — <a href="mailto:thejollysky@gmail.com">thejollysky@gmail.com</a></p>
+
+    </section>
+
+    <footer>© 2026 Jolly Sky · All rights reserved</footer>
+
+  </div>
+
+</body>
+</html>
