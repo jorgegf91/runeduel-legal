@@ -4,39 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rune Duel — Legal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0f0d;
-    --surface: #131a17;
-    --text: #e8efe9;
-    --text-soft: #8b9b91;
-    --accent: #4ade80;
-    --accent-soft: #6ee7a3;
-    --accent-dim: rgba(74, 222, 128, 0.18);
-    --border: #1f2925;
-    --code-bg: #1a221d;
+    --bg: #0a0a0c;
+    --surface: #111114;
+    --surface-2: #1a1a20;
+    --border: #1f1f23;
+    --text: #fafafa;
+    --text-secondary: #c8c8d0;
+    --text-muted: #8b8b95;
+    --text-dim: #6b6b75;
+    --accent: #a78bfa;
+    --accent-soft: #c4b5fd;
+    --accent-dim: rgba(167, 139, 250, 0.12);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   html, body { margin: 0; padding: 0; }
   body {
     background: var(--bg);
-    color: var(--text);
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: 1.7;
-    padding: 0 20px 60px;
+    color: var(--text-secondary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    padding: 0 20px 80px;
+    -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Sticky top nav ───────────────────────────── */
   .topnav {
     position: sticky;
     top: 0;
-    background: rgba(10, 15, 13, 0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
     border-bottom: 1px solid var(--border);
     z-index: 10;
-    margin: 0 -20px 40px;
+    margin: 0 -20px 48px;
     padding: 14px 20px;
   }
   .topnav-inner {
@@ -49,37 +55,44 @@
     flex-wrap: wrap;
   }
   .brand {
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-shadow: 0 0 18px rgba(74, 222, 128, 0.4);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -0.01em;
+  }
+  .brand-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 8px var(--accent);
   }
   .nav-links {
     display: flex;
-    gap: 18px;
+    gap: 4px;
   }
   .nav-links a {
     font-size: 13px;
-    color: var(--text-soft);
+    color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.15s;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
   }
-  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover {
+    color: var(--text);
+    background: var(--surface-2);
+  }
 
-  /* ── Sections ─────────────────────────────────── */
-  .container {
-    max-width: 760px;
-    margin: 0 auto;
-  }
+  .container { max-width: 760px; margin: 0 auto; }
   .doc {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 48px 40px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(74, 222, 128, 0.03);
+    padding: 44px 40px;
     scroll-margin-top: 80px;
     margin-bottom: 24px;
   }
@@ -87,89 +100,95 @@
     .doc { padding: 28px 22px; }
   }
 
-  /* Typography */
   h1 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text);
-    margin: 0 0 8px;
-    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
   .last-updated {
-    color: var(--text-soft);
-    font-size: 14px;
-    font-style: italic;
-    margin-bottom: 28px;
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-bottom: 24px;
   }
   .intro {
-    font-size: 16px;
-    color: var(--text-soft);
-    border-left: 3px solid var(--accent);
-    padding-left: 16px;
-    margin: 0 0 36px;
+    color: var(--text-secondary);
+    font-size: 15px;
     background: var(--accent-dim);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-right: 14px;
-    border-radius: 0 6px 6px 0;
+    border: 1px solid rgba(167, 139, 250, 0.15);
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 0 0 40px;
   }
   h2 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     color: var(--accent);
     margin: 36px 0 14px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.005em;
   }
   h2:first-of-type { margin-top: 0; }
-  p { margin: 0 0 14px; }
+  p { margin: 0 0 12px; }
   ul {
-    margin: 0 0 16px;
-    padding-left: 22px;
+    margin: 0 0 14px;
+    padding-left: 0;
+    list-style: none;
   }
-  ul li { margin-bottom: 8px; }
-  ul li::marker {
-    color: var(--accent);
+  ul li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
   }
-  strong { color: var(--accent-soft); }
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  strong { color: var(--text); font-weight: 600; }
   a {
     color: var(--accent);
-    text-decoration: underline;
-    text-decoration-color: rgba(74, 222, 128, 0.4);
-    text-underline-offset: 3px;
-    transition: color 0.15s;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+    transition: border-color 0.15s, color 0.15s;
   }
-  a:hover { color: var(--accent-soft); }
+  a:hover {
+    color: var(--accent-soft);
+    border-bottom-color: var(--accent-soft);
+  }
 
   footer {
-    margin-top: 28px;
-    padding-top: 24px;
+    margin-top: 32px;
     text-align: center;
     font-size: 12px;
-    color: var(--text-soft);
+    color: var(--text-dim);
   }
 </style>
 </head>
 <body>
 
-  <!-- Sticky nav -->
   <nav class="topnav">
     <div class="topnav-inner">
-      <span class="brand">Rune Duel · Legal</span>
+      <span class="brand"><span class="brand-dot"></span>Rune Duel · Legal</span>
       <div class="nav-links">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms of Service</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
       </div>
     </div>
   </nav>
 
   <div class="container">
 
-    <!-- ── PRIVACY POLICY ─────────────────────────────── -->
     <section id="privacy" class="doc">
 
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: [LAST_UPDATED_DATE]</p>
+      <p class="last-updated">Last updated · May 2026</p>
 
       <p class="intro">
         This Privacy Policy explains what Rune Duel collects, how it is used, and the choices you have.
@@ -185,8 +204,7 @@
         <li><strong>Crash reports</strong> (via Google Firebase Crashlytics) — error details, device model, OS version, app version.</li>
         <li><strong>Advertising data</strong> (via Google AdMob) — your Android Advertising ID is shared with Google to display rewarded video ads.</li>
       </ul>
-      <p><strong>Stored only on your device, never uploaded:</strong></p>
-      <p>Your game progress, settings, unlocked content. Uninstalling the App deletes this data.</p>
+      <p><strong>Stored only on your device, never uploaded:</strong> your game progress, settings, unlocked content. Uninstalling the App deletes this data.</p>
 
       <h2>2. How we use it</h2>
       <p>To operate and improve the App, fix bugs, show rewarded ads, verify promo codes, and reply to feedback. We do <strong>not</strong> sell your data or send marketing emails.</p>
@@ -194,11 +212,7 @@
       <h2>3. Third parties</h2>
       <p>The App relies on:</p>
       <ul>
-        <li><strong>Google</strong> (Firebase Analytics, Crashlytics, AdMob, Play Services) — see
-          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>
-          and
-          <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
-        </li>
+        <li><strong>Google</strong> (Firebase Analytics, Crashlytics, AdMob, Play Services) — see <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> and <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
       </ul>
       <p>We encourage you to read their policies.</p>
 
@@ -220,11 +234,10 @@
 
     </section>
 
-    <!-- ── TERMS OF SERVICE ───────────────────────────── -->
     <section id="terms" class="doc">
 
       <h1>Terms of Service</h1>
-      <p class="last-updated">Last updated: [LAST_UPDATED_DATE]</p>
+      <p class="last-updated">Last updated · May 2026</p>
 
       <p class="intro">
         These Terms govern your use of the Rune Duel mobile application. By installing or using the App,
