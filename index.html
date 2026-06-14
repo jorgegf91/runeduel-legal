@@ -196,7 +196,7 @@
       </p>
 
       <h2>1. What we collect</h2>
-      <p>Rune Duel does not require an account and does not ask for your name, email address, phone number, or precise location.</p>
+      <p>Rune Duel works without an account and never asks for your phone number or precise location. The only personal data we may receive is your email address and Google account name — and only if you choose to sign in with Google to enable cloud backup (see "cloud backup" below).</p>
       <p><strong>Automatically:</strong></p>
       <ul>
         <li><strong>Anonymous Device ID</strong> — a random UUID generated locally on first launch, used to prevent abuse of rewarded ads and promo codes.</li>
@@ -206,13 +206,20 @@
       </ul>
       <p><strong>Stored only on your device, never uploaded:</strong> your game progress, settings, unlocked content. Uninstalling the App deletes this data.</p>
 
+      <p><strong>If you enable cloud backup (optional, off by default):</strong></p>
+      <ul>
+      <li>Email address and Google account name, plus a user ID (UID) — provided by Google Firebase Authentication when you sign in, to identify your account.</li>
+      <li>Your game progress (save data, inventory, settings) — uploaded to Google Firebase Firestore, linked to your UID, so it can be restored on this or another device.</li>
+     </ul>
+     <p>We process this only with your consent — you opt in by signing in — and solely to back up and restore your progress. The data is held by Google on our behalf and may be stored on servers outside your country. Your email is never stored inside the uploaded save file. We keep it until you delete it (see Section 5). If you never sign in, none of this is collected.</p>
+
       <h2>2. How we use it</h2>
       <p>To operate and improve the App, fix bugs, show rewarded ads, verify promo codes, and reply to feedback. We do <strong>not</strong> sell your data or send marketing emails.</p>
 
       <h2>3. Third parties</h2>
       <p>The App relies on:</p>
       <ul>
-        <li><strong>Google</strong> (Firebase Analytics, Crashlytics, AdMob, Play Services) — see <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> and <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
+        <li><strong>Google</strong> (Firebase Authentication, Firestore, Analytics, Crashlytics, AdMob, Play Services) — see <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> and <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
       </ul>
       <p>We encourage you to read their policies.</p>
 
@@ -222,6 +229,7 @@
       <h2>5. Your rights</h2>
       <p>You can disable analytics and ad personalization at any time via your device settings (Android: Settings → Privacy → Ads).</p>
       <p>You can delete all local data in the in-app Settings, or by uninstalling.</p>
+      <p>If you used cloud backup, you can delete your cloud data and account at any time from the in-app Settings ("Delete my cloud data"), or by emailing us at the address in Section 7. We erase your cloud save and account within 30 days.</p>
       <p>If you are located in the <strong>European Economic Area, UK or Switzerland</strong>, you have rights under the GDPR: access, rectification, erasure, restriction, portability, objection, withdrawal of consent, and lodging a complaint with your data protection authority.</p>
       <p>If you are a <strong>California resident</strong>, you have rights under the CCPA: to know what we collect, to delete it, and to opt out of any sale (we do not sell personal information).</p>
       <p>To exercise any of these rights, email us at the address in Section 7. We respond within 30 days.</p>
